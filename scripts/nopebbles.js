@@ -1,21 +1,33 @@
 mapboxgl.accessToken = 'pk.eyJ1IjoicHJldHppbHoiLCJhIjoiY2p3bGdvdzFmMDNmYTRhbWN0ZGk5MGVxeSJ9.M5lPXsMlvwOa_ablXgwLyQ';
-var map = new mapboxgl.Map({
-    container: 'map',
-    style: 'mapbox://styles/mapbox/streets-v11',
-    center: [-96, 37.8],
-    zoom: 3
 
-});
-
-map.addControl(new mapboxgl.GeolocateControl({
-    positionOptions: {
-        enableHighAccuracy: true
+var NoPebbles = {
+    Init: function() {
+        this.InitializeMap();
     },
-    trackUserLocation: true
-}));
 
-map.on('click', function (e) {
-    // e.lngLat is the longitude, latitude geographical position of the event
-    console.log(e.lngLat);
-});
+    InitializeMap: function() {
+        var map = new mapboxgl.Map({
+            container: 'map',
+            style: 'mapbox://styles/mapbox/streets-v11',
+            center: [-96, 37.8],
+            zoom: 3
+        
+        });
+        
+        map.addControl(new mapboxgl.GeolocateControl({
+            positionOptions: {
+                enableHighAccuracy: true
+            },
+            trackUserLocation: false
+        }));
+        
+        
+        map.on('click', function (e) {
+            // e.lngLat is the longitude, latitude geographical position of the event
+            console.log(e.lngLat);
+        });        
+    }
 
+}
+ 
+NoPebbles.Init();
