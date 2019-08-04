@@ -2,7 +2,8 @@ mapboxgl.accessToken = 'pk.eyJ1IjoicHJldHppbHoiLCJhIjoiY2p3bGdvdzFmMDNmYTRhbWN0Z
 
 var NoPebbles = {
     Map: {},
-    PointData: turf.featureCollection([]),
+    PointData: [],
+
     Init: function() {
         this.InitializeMap();
         this.InitializeButtons();
@@ -25,30 +26,31 @@ var NoPebbles = {
         }));  
 
         NoPebbles.Map.on('load', () => {
-            NoPebbles.Map.addSource("points", {
-                "type": "geojson",
-                "data": {
-                    "type": "FeatureCollection",
-                    "features": []
-                }
-            });    
 
-            NoPebbles.Map.addLayer({
-                'id': 'point',
-                'type': 'circle',
-                'source': 'points',
-                'paint': {
-                    // make circles larger as the user zooms from z12 to z22
-                    'circle-radius': {
-                        'base': 8,
-                        'stops': [[12, 2], [22, 180]]
-                    },
-                    'circle-color': '#00b7bf',
-                    'circle-radius': 8,
-                    'circle-stroke-width': 1,
-                    'circle-stroke-color': '#333',
-                }
-            });   
+            //TODO for loading points on pageload
+            // NoPebbles.Map.addSource("points", {
+            //     "type": "geojson",
+            //     "data": {
+            //         "type": "FeatureCollection",
+            //         "features": []
+            //     }
+            // });    
+
+            // NoPebbles.Map.addLayer({
+            //     'id': 'point',
+            //     'type': 'circle',
+            //     'source': 'points',
+            //     'paint': {
+            //         // make circles larger as the user zooms from z12 to z22
+            //         'circle-radius': {
+            //             'base': 8,
+            //             'stops': [[12, 2], [22, 180]]
+            //         },
+            //         'circle-color': '#00b7bf',
+            //         'circle-stroke-width': 1,
+            //         'circle-stroke-color': '#333',
+            //     }
+            // });   
         })
     },
 
@@ -59,20 +61,44 @@ var NoPebbles = {
     },
 
     StartTrip: function() {
+        document.getElementById('saveTrip').classList.remove("hidden");
+        document.getElementById('cancelTrip').classList.remove("hidden");
+        document.getElementById('enterTrip').classList.add("hidden");
+        var tripObject = {
+            PointList: []    
+        }
+        var hasPlacedFirstPoint = false;
         // attach a click to the map to grab the latitude and longitude, and place a marker there
         NoPebbles.Map.on('click', function (e) {
-            // e.lngLat is the longitude, latitude geographical position of the event
-            console.log(e.lngLat);
+            // NoPebbles.PointData.features.push({
+            //     "type": "Feature",
+            //     "geometry": {
+            //         "type": "Point",
+            //         "coordinates": e.lngLat
+            //     }
+            // });
+            if (!hasPlacedFirstPoint) {
+                var el = document.createElement('div');
+                el.className = 'marker';
+                firstPoint = new mapboxgl.Marker(el)
+                    .setLngLat(e.lngLat)
+                    .addTo(NoPebbles.Map);
+                hasPlacedFirstPoint = true;
+                tripObject.PointList += firstPoint;
+                
+            }
+            else {
+                var el = document.createElement('div');
+                el.className = 'marker';
+                point = new mapboxgl.Marker(el)
+                    .setLngLat(e.lngLat)
+                    .addTo(NoPebbles.Map);
+                //hasPlacedFirstPoint = false;
+                //draw a line between the two points
+                tripObject.PointList += point;
+                
+            }
             
-            NoPebbles.PointData.features.push({
-                "type": "Feature",
-                "geometry": {
-                    "type": "Point",
-                    "coordinates": e.lngLat
-                }
-            });
-            
-            NoPebbles.Map.getSource('points').setData(NoPebbles.PointData);   
         }); 
     },
 
@@ -81,7 +107,9 @@ var NoPebbles = {
     },
 
     CancelTrip: function() {
-
+        document.getElementById('enterTrip').classList.remove("hidden");
+        document.getElementById('cancelTrip').classList.add("hidden");
+        document.getElementById('saveTrip').classList.add("hidden");
     }
 
 }
