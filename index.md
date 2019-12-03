@@ -4,3 +4,8 @@
 
 layout: home
 ---
+
+# kurt kaufman
+- projects
+- [church]({% link church.md %})
+- [cookies]({% link cookies.md %})

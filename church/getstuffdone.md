@@ -1,18 +1,10 @@
-<html>
-    <head>
-        <link rel="stylesheet" href="../styles/cookies.css">
-    </head>
-
-    <body>
-        <div class="marginAuto">
-            <pre class="stardoc">
 
 This message was delivered on October 30, 2016 at the Green Lake Federated Church. 
 I also provided all of the materials for the service, including liturgy and the hymns. 
 
 * * * 
 
-<i>Get Stuff Done</i>
+_Get Stuff Done_
 
 I have no idea what I'm doing. There hasn't been a time I've truly known what I'm doing ever in my life, really. 
 I distinctly remember a time about half way through my college career, where, 
@@ -138,12 +130,4 @@ Never pass up the opportunity to do something just because you were too scared t
 [1] Kittel, Gerhard (editor), Theological Dictionary of the New Testament. Article on "archiereus" 
     by Gottlob Schrenk. Grand Rapids: Wm. B. Eerdmans Pub. Co., 1972. pg. 268.
 
-<a href="../church.html">back</a>
-
-
-            </pre>
-        </div>
-    </body>
-</html>
-
-<script src="../scripts/stardoc.js"></script>
+[back]({% link index.md %})
