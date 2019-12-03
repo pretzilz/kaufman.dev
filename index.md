@@ -6,6 +6,6 @@ layout: home
 ---
 
 # kurt kaufman
-- projects
+- [projects](http://github.com/pretzilz)
 - [church]({% link church.md %})
 - [cookies]({% link cookies.md %})
