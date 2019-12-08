@@ -1,3 +1,8 @@
+---
+layout: page
+title: Get Stuff Done
+permalink: /church/get-stuff-done
+---
 
 This message was delivered on October 30, 2016 at the Green Lake Federated Church. 
 I also provided all of the materials for the service, including liturgy and the hymns. 

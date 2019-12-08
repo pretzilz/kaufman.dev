@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: home
 title: church
 permalink: /church/
 ---
@@ -14,8 +14,5 @@ permalink: /church/
 ```
 
 # Church
-
-[get stuff done]({% link church/getstuffdone.md %})
-
 
 [back]({% link index.md %})
