@@ -9,6 +9,8 @@ jobs:
 
     steps:
     - uses: actions/checkout@v1
+    
+    - uses: clupprich/ruby-build-action@master
 
     - name: Run a multi-line script
       run: |
