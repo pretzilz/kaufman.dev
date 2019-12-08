@@ -18,6 +18,10 @@ jobs:
         bundle install
         bundle exec jekyll build
 
+    - name: Remove extensions
+      run: |
+        find _site/ -type f ! -iname 'index.html' -iname '*.html' -print0 | while read -d $'\0' f; do mv "$f" "${f%.html}"; done
+
     - name: Publish to AWS S3
       uses: opspresso/action-s3-sync@master
       env:
