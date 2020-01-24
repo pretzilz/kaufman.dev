@@ -6,6 +6,7 @@ layout: default
 ---
 
 # kurt kaufman
-- [projects](http://github.com/pretzilz)
+- [code](http://github.com/pretzilz)
 - [church]({% link church.md %})
+- [bass]({% link bass.md %})
 - [cookies]({% link cookies.md %})
