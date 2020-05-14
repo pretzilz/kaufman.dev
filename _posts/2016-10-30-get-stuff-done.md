@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Get Stuff Done
+permalink: /church/get-stuff-done/
 ---
 
 This message was delivered on October 30, 2016 at the Green Lake Federated Church. 
