@@ -11,3 +11,6 @@ layout: default
 - [church]({% link church.md %})
 - [bass]({% link bass.md %})
 - [cookies]({% link cookies.md %})
+
+---
+_this site is written in markdown, built with jekyll, deployed using github actions, and hosted by aws._
