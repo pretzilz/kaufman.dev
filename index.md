@@ -13,4 +13,4 @@ layout: default
 - [cookies]({% link cookies.md %})
 
 ---
-_this site is written in markdown, built with jekyll, deployed using github actions, and hosted by aws._
+_this site is written in markdown, built with jekyll, and deployed using github actions into an aws s3 bucket._
