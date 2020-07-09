@@ -1,7 +1,13 @@
-const S3 = require('aws-sdk/clients/s3');
-const client = new S3({
-	region: 'us-east-2'
+
+//an iam user configured with only read access to s3. so, go nuts.
+var creds = new AWS.Credentials('AKIAZTNDODFUX6BB2AM7', '6TZst1adsqVMCFGJzCCcKbVSdw3NvdMLWQvpcacC');
+
+
+const client = new AWS.S3({
+    region: 'us-east-2',
+    credentials: creds
 });
+
 
 const params = {
 	Bucket: 'kaufman.dev',
@@ -20,13 +26,11 @@ const params = {
 	}
 };
 
-s3.selectObjectContent(params, (err, data) => {
-	if (err) {
-		switch (err.name) {
-			// Check against specific error codes that need custom handling
-		}
+client.selectObjectContent(params, (err, data) => {
+    if (err) {
+		console.log(err)
 		return;
-	}
+    }
 
 	// data.Payload is a Readable Stream
 	const events = data.Payload;
