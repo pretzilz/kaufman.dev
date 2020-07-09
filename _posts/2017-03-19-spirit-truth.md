@@ -2,6 +2,7 @@
 layout: post
 title: Spirit/Truth
 permalink: /church/spirit-truth/
+category: church
 ---
 
 This was delivered at the Federated Church of Green Lake in March of 2017.

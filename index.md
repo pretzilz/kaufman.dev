@@ -6,6 +6,7 @@ layout: default
 ---
 
 # kurt kaufman
+- [resume]({{ site.url }}/media/kurtkaufman_resume.pdf)
 - [code](http://github.com/pretzilz)
 - [church]({% link church.md %})
 - [bass]({% link bass.md %})

@@ -2,6 +2,7 @@
 layout: post
 title: A Stillness
 permalink: /church/a-stillness/
+category: church
 ---
 
 The following sermon was my second sermon, delivered to a small crowd on a particular Sunday at the American Baptist Assembly in Green Lake, WI in 2015.

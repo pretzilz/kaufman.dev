@@ -19,5 +19,6 @@ Below are some live recordings of performances I've been a part of, currently en
 - [Starlight](https://www.youtube.com/watch?v=BCbTrDl15Lk)
 - [You Alone (Lighthouse Original)](https://www.youtube.com/watch?v=wyq0JTNK_Gs)
 - [Nothing But The Blood](https://www.youtube.com/watch?v=J9Ec6pNol6Q&list=PLmu-7_tQ5vkiDD84RWxV2OAYqsLfcozYH&index=15&t=0s)
+- [With First Baptist Church of Denver: 10,000 Reasons (recorded separately)](https://www.youtube.com/watch?v=Qp6MFLyKoas)
 
 [back]({% link index.md %})
