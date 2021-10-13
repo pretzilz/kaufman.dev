@@ -14,6 +14,7 @@ permalink: /bass/
 # Bass
 Below are some live recordings of performances I've been a part of, currently entirely consisting of worship music from my time playing bass with the Lighthouse Church worship team in Lakewood, CO.
 
+- [July 2021 Worship Night](https://www.youtube.com/watch?v=oixR3dmSdxU)
 - [Spirit Move](https://www.youtube.com/watch?v=8aDW_8_gBCQ)
 - [Highlands (Song of Ascent)](https://www.youtube.com/watch?v=BP84WsnqxZY)
 - [Starlight](https://www.youtube.com/watch?v=BCbTrDl15Lk)
