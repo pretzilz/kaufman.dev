@@ -10,7 +10,7 @@ jobs:
     steps:
     - uses: actions/checkout@v1
     
-    - uses: clupprich/ruby-build-action@master
+    - uses: clupprich/setup-ruby@master
 
     - name: Jekyll Build
       run: |
