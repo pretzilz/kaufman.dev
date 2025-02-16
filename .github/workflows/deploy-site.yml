@@ -12,7 +12,7 @@ jobs:
     
     - uses: ruby/setup-ruby@master
       with:
-        ruby-version: 3.1
+        ruby-version: 2
 
     - name: Jekyll Build
       run: |
